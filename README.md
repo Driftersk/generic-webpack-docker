@@ -16,3 +16,4 @@ $ NODE_ENV=production node index.js
 # Useful tips:
 - to get inside running container use `$docker exec -it <container_name> /bin/bash`
 - to delete all inactive containers use ``docker container rm `docker ps -aq -f status=exited` ``
+- on windows there can be problem with file path, especially with :, set this enviroment variable `COMPOSE_CONVERT_WINDOWS_PATHS=1` to fix the problem
