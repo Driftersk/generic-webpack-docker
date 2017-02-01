@@ -1,11 +1,12 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
-var javascriptEntryPath = path.resolve(__dirname, 'src', 'index.js');
-var htmlEntryPath = path.resolve(__dirname, 'src', 'index.html');
-var buildPath = path.resolve(__dirname, 'public', 'build');
+const javascriptEntryPath = path.resolve(__dirname, 'src', 'index.js');
+const htmlEntryPath = path.resolve(__dirname, 'src', 'index.html');
+const buildPath = path.resolve(__dirname, 'public', 'build');
 
 module.exports = {
+  devtool: 'source-map',
   entry: [
     'webpack-hot-middleware/client?reload=true', 
     javascriptEntryPath,
@@ -23,11 +24,17 @@ module.exports = {
     }, {
       test: /\.html$/,
       loader: 'file?name=[name].[ext]',
-    }], 
+    }, {
+      test: /\.styl$/,
+      loader: 'style-loader!css-loader!stylus-loader'
+    } ,{
+      test: /\.(jpg|png)$/,
+      loader: 'file-loader?name=[path][name].[ext]',
+  }],
   },
   plugins: [ 
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ]
-}
+};

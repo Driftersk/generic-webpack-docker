@@ -30,12 +30,16 @@ if (isDeveloping) {
 
   app.use(middleware);
   app.use(webpackHotMiddleware(compiler));
+
+  // serve images as static content
+  app.use('/images', express.static(path.join(__dirname, 'src/images')));
+
   app.get('*', function response(req, res) {
     res.write(middleware.fileSystem.readFileSync(bundlePath));
     res.end();
   });
 } else {
-  const staticPath = path.join(__dirname, 'public/build')
+  const staticPath = path.join(__dirname, 'public/build');
   app.use(express.static(staticPath));
 }
 

@@ -13,5 +13,5 @@ $ webpack
 $ NODE_ENV=production node index.js
 ```
 
-# Usefull tips:
-- to get inside running container use $  docker exec -it <container_name> /bin/bash
+# Useful tips:
+- to get inside running container use `$docker exec -it <container_name> /bin/bash`
