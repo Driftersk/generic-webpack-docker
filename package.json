@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Driftersk/sample-docker-webpack"
+    "url": "git+https://github.com/Driftersk/generic-webpack-docker"
   },
   "author": "df",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Driftersk/sample-docker-webpack/issues"
+    "url": "https://github.com/Driftersk/generic-webpack-docker/issues"
   },
-  "homepage": "https://github.com/Driftersk/sample-docker-webpack",
+  "homepage": "https://github.com/Driftersk/generic-webpack-docker",
   "devDependencies": {
     "babel-core": "^6.3.26",
     "babel-loader": "^6.2.0",
