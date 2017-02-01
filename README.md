@@ -15,3 +15,4 @@ $ NODE_ENV=production node index.js
 
 # Useful tips:
 - to get inside running container use `$docker exec -it <container_name> /bin/bash`
+- to delete all inactive containers use ``docker container rm `docker ps -aq -f status=exited` ``
