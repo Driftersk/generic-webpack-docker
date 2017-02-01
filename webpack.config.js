@@ -20,10 +20,10 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       exclude: /(node_modules|bower_components)/,
-      loaders: ['babel?presets[]=react,presets[]=es2015'],
+      loaders: ['babel-loader?presets[]=react,presets[]=es2015'],
     }, {
       test: /\.html$/,
-      loader: 'file?name=[name].[ext]',
+      loader: 'file-loader?name=[name].[ext]',
     }, {
       test: /\.styl$/,
       loader: 'style-loader!css-loader!stylus-loader'
@@ -33,8 +33,8 @@ module.exports = {
   }],
   },
   plugins: [ 
-    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin()
   ]
 };
