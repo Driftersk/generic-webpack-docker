@@ -29,6 +29,7 @@ $ NODE_ENV=production node index.js
 
 ## Usage without docker-compose, just docker:
 This runs application in production mode, which can be accesses on `http://localhost:80`
+
 1. navigate to app directory (where `Dockerfile` is located)
 2. build image `docker build -t drft/generic-webpack-docker .`
 3. running container ``docker run -d -v `pwd`:/usr/src/app/ -p 80:4000 drft/generic-webpack-docker``
